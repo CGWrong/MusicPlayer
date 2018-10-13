@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="edittext_hint"><font size="18">想听什么？</font></string>
+</resources>

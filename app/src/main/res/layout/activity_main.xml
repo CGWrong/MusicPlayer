@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearlayout">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:id="@+id/toolbar"
+                    android:background="@color/colorPrimaryDark"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/music_list_way"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/all_music"
+                            android:background="@drawable/all_music_backg"
+                            android:button="@null" />
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/music_list"
+                            android:background="@drawable/music_list_backg"
+                            android:button="@null"
+                            android:layout_marginLeft="50dp"/>
+                    </RadioGroup>
+
+                </android.support.v7.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:background="#333333"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/search_linear">
+
+                    <EditText
+                        android:id="@+id/search_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:textSize="20dp"
+                        android:singleLine="true"
+                        android:drawableLeft="@drawable/search1"
+                        android:hint="想听什么"
+                        android:drawablePadding="10dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/search_button"
+                        android:text="Search"
+                        android:background="@android:color/transparent"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewpager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v4.view.ViewPager>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="16dp"
+                android:src="@drawable/target" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="start"
+            android:background="#666666"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:padding="10dp"
+                android:background="@drawable/cgmusic">
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="何以待你好偏不懂"
+                    android:textSize="17sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textview"
+                    android:text="如果我听歌可眼红"
+                    android:textSize="17sp"
+                    android:textColor="#000000"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/download"
+                        android:text="下载"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:drawablePadding="4dp"
+                        android:background="@android:color/transparent"
+                        android:layout_marginLeft="15dp"/>
+                    <Button
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/time"
+                        android:text="定时"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:drawablePadding="4dp"
+                        android:background="@android:color/transparent"
+                        android:layout_toRightOf="@+id/download"/>
+                    <Button
+                        android:id="@+id/settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/settings"
+                        android:text="设置"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:drawablePadding="4dp"
+                        android:background="@android:color/transparent"
+                        android:layout_toRightOf="@+id/time"/>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退出"
+                    android:textSize="22sp"
+                    android:textColor="#000"
+                    android:drawableLeft="@drawable/exit"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="#666666"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_group"
+                    android:orientation="horizontal"
+                    android:layout_above="@+id/view">
+
+                    <RadioButton
+                        android:id="@+id/repeat_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="单曲循环"
+                        android:textSize="15sp"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:layout_marginLeft="28dp" />
+                    <RadioButton
+                        android:id="@+id/random_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="随机播放"
+                        android:textSize="15sp"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:layout_marginLeft="28dp"/>
+                    <RadioButton
+                        android:id="@+id/repeat_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="列表循环"
+                        android:textSize="15sp"
+                        android:textColor="@color/radiobutton_textcolor"
+                        android:background="@drawable/radiobutton_background"
+                        android:button="@null"
+                        android:layout_marginLeft="28dp"/>
+                </RadioGroup>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:background="#999999"
+                    android:layout_above="@id/radio_group"/>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="2dp"
+                    android:background="#999999"
+                    android:layout_above="@+id/exit" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/toNewframe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/play_progress"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/circle"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/next"
+            android:src="@drawable/next"
+            android:background="@android:color/transparent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/play_progress"
+            />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/pause"
+            android:layout_toLeftOf="@+id/next"
+            android:src="@drawable/play"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:layout_below="@+id/play_progress"/>
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/previous"
+            android:src="@drawable/previous"
+            android:background="@android:color/transparent"
+            android:layout_toLeftOf="@+id/pause"
+            android:layout_below="@+id/play_progress"/>
+
+        <com.cgwrong.musicplayer.MarqueTextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/play_progress"
+            android:id="@+id/title"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:singleLine="true"
+            android:focusable="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:id="@+id/artist"
+            android:layout_marginLeft="15dp"
+            android:textSize="10dp"
+            android:layout_marginBottom="5dp"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

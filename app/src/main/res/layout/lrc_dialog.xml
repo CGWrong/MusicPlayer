@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌名："
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/search_music_title"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/search_music_title"
+        android:id="@+id/search_title_edit"
+        android:background="@drawable/edittext"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌手："
+        android:layout_below="@+id/search_music_title"
+        android:id="@+id/search_music_artist"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_music_title"
+        android:layout_toRightOf="@+id/search_music_artist"
+        android:id="@+id/search_artist_edit"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>

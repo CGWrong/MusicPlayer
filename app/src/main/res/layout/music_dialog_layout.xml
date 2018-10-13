@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲信息"
+        android:id="@+id/inf"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文件名："
+        android:id="@+id/file_name"
+        android:textSize="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/inf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/file_name"
+        android:id="@+id/file_name_text"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/inf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/file_name_text"
+        android:text="大小："
+        android:id="@+id/size"
+        android:textSize="15dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/size_text"
+        android:layout_below="@+id/file_name_text"
+        android:layout_toRightOf="@+id/size"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/url"
+        android:layout_below="@+id/size_text"
+        android:text="保存路径："
+        android:textSize="15dp"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/size_text"
+        android:layout_toRightOf="@+id/url"
+        android:id="@+id/url_text"
+        android:textSize="15dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
